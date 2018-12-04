@@ -1,0 +1,4 @@
+Small wrapper around `osascript`.
+Logs all use of osascript to `/usr/local/var/log/osascript-audit.log`, because jamf tried to use it for something and that spooked me.
+
+To use, rename the osascript binary to `osascript.bak`, then run `go build -o osascript && cp osascript /usr/bin/osascript`.
