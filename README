@@ -1,4 +1,11 @@
 Small wrapper around `osascript`.
 Logs all use of osascript to `/usr/local/var/log/osascript-audit.log`, because jamf tried to use it for something and that spooked me.
 
-To use, rename the osascript binary to `osascript.bak`, then run `go build -o osascript && cp osascript /usr/bin/osascript`.
+To use:
+
+```sh
+go build -o /usr/local/bin/osascript
+```
+
+Ensure your `$PATH` sets `/usr/local/bin` before `/usr/bin`.
+Anything invoking `osascript` by name, and not by path, will call the wrapper in `/usr/local/bin` instead of the default.
