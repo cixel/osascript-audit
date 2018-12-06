@@ -3,7 +3,7 @@ Logs all use of osascript to `/usr/local/var/log/osascript-audit.log`, because j
 
 To use:
 
-```sh
+```
 go build -o /usr/local/bin/osascript
 ```
 
